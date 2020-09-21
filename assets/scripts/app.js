@@ -1,20 +1,21 @@
+class Product {
+  title = 'DEFAULT';
+  imageUrl;
+  description;
+  price;
+
+  constructor(title,image,desc,price){
+    this.title = title;
+    this.imageUrl = image;
+    this.description = desc;
+    this.price = price;
+  }
+
+}
 const productList = {
     products : [
-        {
-          title: "Pillow",
-          imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/711UQcfhLlL._AC_SX522_.jpg",
-          price: 19.99,
-          description: "A pillow",
-        },
-      
-        {
-          title: "Carpet",
-          imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/711UQcfhLlL._AC_SX522_.jpg",
-          price: 89.99,
-          description: "A Good Carpet",
-        }
+      new Product("Pillow","https://images-na.ssl-images-amazon.com/images/I/711UQcfhLlL._AC_SX522_.jpg",'A Soft Pillow',19.99),
+      new Product("Carpet","https://images-na.ssl-images-amazon.com/images/I/711UQcfhLlL._AC_SX522_.jpg","A Good Carpet",89.99)
       ],
       render (){
           const renderHook = document.getElementById('app');
